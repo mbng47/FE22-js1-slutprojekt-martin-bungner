@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="lib/anime.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <title>Flickr image search Martin</title>
+</head>
+
+<body>
+    <div id="bg-left"></div>
+    <div id="bg-right"></div>
+    <header>
+        <p>Flickr image search</p>
+    </header>
+    <section id="search-section">
+        <h2>På den här hemsidan kan du söka efter bilder från Flickr</h2>
+        <h3>Fyll i formuläret nedan</h3>
+        <form>
+            <label for="text-input-field">Söktext:</label>
+            <input type="text" id="text-input-field" placeholder="vad vill du se">
+            <label for="num-input-field">Antal foton:</label>
+            <input type="number" id="num-input-field" placeholder="hur många">
+            <p>Storlek på bilderna:</p>
+            <label for="img-size-inp-s">Small</label>
+            <input type="radio" id="img-size-inp-s" class="radio-input" name="img-size" value="m">
+            <label for="input-img-size-med">Medium</label>
+            <input type="radio" id="img-size-inp-m" class="radio-input" name="img-size" value="w">
+            <label for="input-img-size-lar">Large</label>
+            <input type="radio" id="img-size-inp-l" class="radio-input" name="img-size" value="z">
+            <select name="input-dropdown" id="select-dropdown" size="1">
+                <option value="none">Sortera bilder efter</option>
+                <option value="date-posted-desc">Uppladdningsdatum</option>
+                <option value="relevance">Relevans</option>
+                <option value="interestingness-desc">Interestningness</option>
+            </select>
+            <button type="submit" id="submit-btn">Hämta</button>
+            <button type="reset" id="reset-btn">Rensa</button>
+        </form>
+        <ul id="alert-ul">Kunde inte hämta eftersom</ul>
+    </section>
+    <section id="result-section">
+        <h2>Här kommer bilderna att visas i behändig storlek</h2>
+        <h3>Klicka på dem för att visa i originalstorlek</h3>
+        <div id="loader"></div>
+        <article id="image-container">
+        </article>
+    </section>
+</body>
+
+</html>
